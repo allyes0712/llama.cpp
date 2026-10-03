@@ -2102,7 +2102,7 @@ static struct llama_sampler_i llama_sampler_temp_i = {
 };
 
 struct llama_sampler * llama_sampler_init_temp(float temp) {
-    const bool is_empty = temp == 1.0f;
+    const bool is_empty = temp == 0.0f;
 
     if (is_empty) {
         return llama_sampler_init_empty("?temp");
